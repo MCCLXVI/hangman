@@ -21,12 +21,12 @@ function App() {
   const [gameWon, setGameWon] = useState(false);
 
   useEffect(() => {
-    const randomWord = WORDS[Math.floor(Math.random() * WORDS.length)].toLowerCase(); // Fixing the variable name
+    const randomWord = WORDS[Math.floor(Math.random() * WORDS.length)].toLowerCase();
     setWord(randomWord);
   }, []);
 
   const handleGuess = (letter: string) => {
-    if (guessedLetters.includes(letter) || gameOver) return; // If already guessed or game is over, do nothing
+    if (guessedLetters.includes(letter) || gameOver) return; 
 
     setGuessedLetters([...guessedLetters, letter]);
 
